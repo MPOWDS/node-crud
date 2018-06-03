@@ -4,10 +4,10 @@ var app = express();
 var path = require('path');
 var session = require('express-session');
 var bodyParser = require('body-parser');
-
+var nodemailer = require('nodemailer');
 var fileUpload = require('express-fileupload');
 
-var port = process.env.PORT || 3000 //En port der er åben. Kunne også være 8080 eller 1387 eller ...;
+var port = process.env.PORT || 1387 //En port der er åben. Kunne også være 8080 eller 1387 eller ...;
 
 app.use(express.static('public/' + __dirname));
 

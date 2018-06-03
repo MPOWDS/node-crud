@@ -21,6 +21,38 @@ module.exports = function (app) {
         });      
     });
 
+    // Newsletter page
+    app.get('/news', function (req, res) {
+        res.render('pages/news', {
+            site: "news"
+        });
+    });
+
+    var nodemailer = require('nodemailer');
+
+    var transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: 'mpowds@gmail.com',
+        pass: 'rts-0520'
+      }
+    });
+    
+    var mailOptions = {
+      from: 'mpowds@gmail.com',
+      to: 'r.b.m@outlook.dk',
+      subject: 'Sending Email using Node.js',
+      text: 'That was easy!'
+    };
+    
+    transporter.sendMail(mailOptions, function(error, info){
+      if (error) {
+        console.log(error);
+      } else {
+        console.log('Email sent: ' + info.response);
+      }
+    }); 
+
     // Admin page
     app.get('/admin', function (req, res) {
         res.render('admin/index', {  

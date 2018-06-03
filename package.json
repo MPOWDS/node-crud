@@ -17,6 +17,7 @@
     "fetch": "^1.1.0",
     "mysql": "^2.15.0",
     "mysql2": "^1.5.3",
+    "nodemailer": "^4.6.5",
     "nodemon": "^1.17.5",
     "req-flash": "0.0.3"
   }
