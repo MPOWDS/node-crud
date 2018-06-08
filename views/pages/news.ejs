@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>NodeJS</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" src="../../css/style.css" type="text/css">
+    <link rel="stylesheet" href="public/css/style.css">
     
-    <style>
+    <!-- <style>
         .resimg{width:100%;display:inline-block}
-    </style>
+    </style> -->
 </head>
 <body>
     <nav class="navbar navbar-expand-md navbar-blue fixed-top bg-dark">
@@ -49,30 +49,27 @@
     </div>
     </nav>
 
-    <main role="main">
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-        <div class="container">
-        <h1 class="display-3">Hey, retro music lovers!</h1>
-        <p>This is a template for a simple informational website.</p>
-        <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
+    <div class="container">
+        <h1 class="brand"> 👻Tilmelding til Nyhedsbrevet👻</h1>
+          <div class="contact">
+            <h3>E-mail Os</h3>
+            {{msg}}
+            <form method="POST" action="send">
+              <p>
+                <label>Navn</label>
+                <input type="text" name="name">
+              </p>
+              <p>
+                <label>Email Addresse</label>
+                <input type="email" name="email">
+              </p>
+              <p class="full">
+                <button type="submit">Submit</button>
+              </p>
+            </form>
+          </div>
         </div>
-    </div>
-            <h3>Tilmeld Nyheds Brev her!</h3>
-                {{msg}}
-                <form method="POST" action="send">
-                <p>
-                    <label>Navn  </label>
-                    <input type="text" name="name">
-                </p>
-                <p>
-                    <label>Email </label>
-                    <input type="email" name="email">
-                </p>
-                    <button type="submit">Submit</button>
-                </form>
-    </main>
+      </div>
     <footer class="container">
     <p>&copy; MPOWDS 2018 | Web-Administrator Randi Mortensen</p>
     </footer>
